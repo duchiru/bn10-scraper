@@ -1,0 +1,15 @@
+[project]
+name = "bn10-scraper"
+version = "1.0.0"
+description = "Bot tra điểm tuyển sinh vào lớp 10 của Sở GDĐT Bắc Ninh"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+	"aiohttp=^3.12.13",
+	"beautifulsoup4=^4.13.4",
+	"pillow=^11.2.1",
+	"pytesseract=^0.3.13",
+]
+
+[dependency-groups]
+dev = ["ruff=^0.12.0"]
