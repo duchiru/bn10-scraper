@@ -1,8 +1,8 @@
 import aiohttp
 from bs4 import BeautifulSoup
 
-AUTH_URL = 'https://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-10-bac-ninh'
-RESULT_URL = 'https://tsdaucap.bacninh.edu.vn/TraCuu/KetQuaTraCuuTuyenSinh10BacNinh'
+AUTH_URL = 'http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-10-bac-ninh'
+RESULT_URL = 'http://tsdaucap.bacninh.edu.vn/TraCuu/KetQuaTraCuuTuyenSinh10BacNinh'
 
 
 class CaptchaException(Exception):
