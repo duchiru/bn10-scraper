@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "pypy3.10"
 
       - name: Install system dependencies
         run: |
@@ -29,11 +29,11 @@ jobs:
 
       - name: Run scraper
         run: |
-          python3 src/main.py
+          python src/main.py
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
           name: scraper-results
-          path: src/output.db
+          path: output.db
           retention-days: 30
