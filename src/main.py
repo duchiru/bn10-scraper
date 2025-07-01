@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from captcha import solve_captcha
 from result import CaptchaException, IdException, get_result
 
-ROOT_URL = 'http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh'
+ROOT_URL = 'https://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh'
 
 MAX_SCHOOL_ID = 23  # 22 schools numbered from 02 to 23
 

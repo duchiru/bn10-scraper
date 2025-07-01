@@ -5,7 +5,7 @@ import aiohttp
 import pytesseract
 from PIL import Image
 
-CAPTCHA_URL = 'http://tsdaucap.bacninh.edu.vn/getcaptcha'
+CAPTCHA_URL = 'https://tsdaucap.bacninh.edu.vn/getcaptcha'
 
 
 async def get_captcha(client: aiohttp.ClientSession, log) -> dict[str, str]:
