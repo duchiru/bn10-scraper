@@ -19,8 +19,8 @@ jobs:
 
       - name: Test target server
         run: |
-          curl -I http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh || echo "Connection failed"
-          ping -c 3 tsdaucap.bacninh.edu.vn || echo "Ping failed"
+          curl http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh || echo "Connection failed"
+          ping -c 3 http://tsdaucap.bacninh.edu.vn || echo "Ping failed"
 
       - name: Install system dependencies
         run: |
