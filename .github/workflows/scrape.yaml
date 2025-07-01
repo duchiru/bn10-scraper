@@ -15,7 +15,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "pypy3.10"
+          python-version: "3.13"
+
+      - name: Test target server
+        run: |
+          curl -I http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh || echo "Connection failed"
+          ping -c 3 tsdaucap.bacninh.edu.vn || echo "Ping failed"
 
       - name: Install system dependencies
         run: |
