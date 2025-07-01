@@ -53,4 +53,4 @@ async def get_final_result(client: aiohttp.ClientSession, key: str) -> list[str]
 
 async def get_result(client: aiohttp.ClientSession, id: str, token: str, captcha: dict[str, str]):
 	key = await get_result_key(client, id, token, captcha)
-	return get_final_result(client, key)
+	return await get_final_result(client, key)
