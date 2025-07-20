@@ -41,7 +41,7 @@ async def worker(school_id):
 	current_student_id = 1
 	school_result = []
 
-	while True:
+	while current_student_id < 800:
 		STUDENT_ID_STR = str(current_student_id)
 		STUDENT_ID_STR = '0' * (4 - len(STUDENT_ID_STR)) + STUDENT_ID_STR
 
@@ -58,7 +58,7 @@ async def worker(school_id):
 		except CaptchaException:
 			captcha = await solve_captcha(client, log)
 		except IdException:
-			break
+			current_student_id += 1
 
 	c.acquire()
 	results.extend(school_result)
