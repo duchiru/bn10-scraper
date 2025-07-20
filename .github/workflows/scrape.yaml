@@ -17,6 +17,10 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Test target server (HTTP)
+        run: |
+          curl http://tsdaucap.bacninh.edu.vn/tra-cuu-ket-qua-tuyen-sinh-bac-ninh
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
